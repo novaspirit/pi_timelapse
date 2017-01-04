@@ -34,4 +34,4 @@ command to sort photos to number query
 
 command to convert photos to video
 
->gst-launch-1.0 multifilesrc location=timelapse%04d.jpeg index=1 caps="image/jpeg,framerate=24/1" ! jpegdec ! omxh264enc ! avimux ! filesink location=timelapse.avi
+>gst-launch-1.0 multifilesrc location=%04d.jpeg index=1 caps="image/jpeg,framerate=24/1" ! jpegdec ! omxh264enc ! avimux ! filesink location=timelapse.avi
