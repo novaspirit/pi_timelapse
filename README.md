@@ -27,7 +27,7 @@ edit crontab to execute raspistill every min
 
 command to sort photos to number query
 
->ls -1v | awk 'BEGIN{ a=0 }{ printf "mv \"%s\" %04d.jpg\n", $0, a++ }' | bash
+>ls -1v | awk 'BEGIN{ a=0 }{ printf "mv \"%s\" %04d.jpeg\n", $0, a++ }' | bash
 
 
 command to convert photos to video
