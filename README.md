@@ -20,12 +20,10 @@ apt-get software:
 create folder to store images
 >mkdir /home/pi/timelapse
 
-copy timelapse.sh to /usr/bin/
-
-edit crontab to execute timelapse.sh every min
+edit crontab to execute raspistill every min
 >sudo crontab -e
 
-> * * * * * sh /usr/bin/timelapse.sh 2>&1
+> * * * * * raspistill -w 1280 -h 720 -o /home/pi/timelapse/$(date +"%Y-%m-%d_%H%M").jpeg 2>&1
 
 command to sort photos to number query
 
